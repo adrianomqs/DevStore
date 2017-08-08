@@ -1,10 +1,6 @@
 ﻿using DevStore.Domain;
-using System;
-using System.Collections.Generic;
+using DevStore.Infra.Mappings;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevStore.Infra
 {
@@ -13,11 +9,19 @@ namespace DevStore.Infra
         public DevStoreDataContext() 
             : base("DevStoreConnectionString")
         {
-
+            Database.SetInitializer<DevStoreDataContext>(new DevStoreDataContextInitializer());
         }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new ProductMap());
+            modelBuilder.Configurations.Add(new CategoryMap());
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
     public class DevStoreDataContextInitializer : DropCreateDatabaseIfModelChanges<DevStoreDataContext>
