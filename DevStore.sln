@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevStore.Domain", "DevStore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevStore.Infra", "DevStore.Infra\DevStore.Infra.csproj", "{45E59381-EEC8-4448-8544-933A99BE59C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevStore.Api", "DevStore.Api\DevStore.Api.csproj", "{C13ED12B-AB1D-4893-9C9B-E09B47241636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45E59381-EEC8-4448-8544-933A99BE59C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45E59381-EEC8-4448-8544-933A99BE59C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45E59381-EEC8-4448-8544-933A99BE59C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C13ED12B-AB1D-4893-9C9B-E09B47241636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13ED12B-AB1D-4893-9C9B-E09B47241636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13ED12B-AB1D-4893-9C9B-E09B47241636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13ED12B-AB1D-4893-9C9B-E09B47241636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
