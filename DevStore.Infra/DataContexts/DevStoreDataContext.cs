@@ -9,7 +9,9 @@ namespace DevStore.Infra
         public DevStoreDataContext() 
             : base("DevStoreConnectionString")
         {
-            Database.SetInitializer<DevStoreDataContext>(new DevStoreDataContextInitializer());
+            //Database.SetInitializer<DevStoreDataContext>(new DevStoreDataContextInitializer());
+            Configuration.LazyLoadingEnabled = false;
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public DbSet<Product> Products { get; set; }
