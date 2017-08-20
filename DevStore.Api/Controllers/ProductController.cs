@@ -57,8 +57,7 @@ namespace DevStore.Api.Controllers
                     return Request.CreateResponse(HttpStatusCode.InternalServerError, "Erro na Adicao do Produto");
                 }
         }
-
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
